@@ -3,43 +3,14 @@
 
 <head>
     <title>Document</title>
-    <script>
-        //Search a specific site rather than the entire Web.
-        function search() {
-            var site = 'wikipedia.org';
-            var lookfor = document.getElementById("txtlookfor").value;
-            if (lookfor.length > 0) {
-                var query =
-                    'http://www.google.com/search?q=' +
-                    encodeURIComponent(lookfor) +
-                    ' site:' +
-                    site;
-                var ddchoice = document.getElementById('dropdown').value;
-                if (ddchoice == 1) {
-                    var query =
-                        'http://www.bing.com/search?q=' +
-                        encodeURIComponent(lookfor) +
-                        ' site:' +
-                        site;
-                } else {
-                    var query =
-                        'http://www.google.com/search?q=' +
-                        encodeURIComponent(lookfor) +
-                        ' site:' +
-                        site;
-                }
-                location.href = query;
-            } else {
-                //If textbox was empty, show an alert.
-                alert('Please type the word or words for which you want to search.');
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
+    <h1>Search Site</h1>
     <p>
-        Search this site:
+        Search a specific site (Wiki):
         <input type="text" id="txtlookfor" autofocus />
         <!-- Show drop-down list -->
         &nbsp;Choose engine:
